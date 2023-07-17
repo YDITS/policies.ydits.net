@@ -1,0 +1,230 @@
+/*
+
+    main.css | YDITS Policies
+
+    Copyright (c) YDITS, よね/Yone
+
+*/
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffffff;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #404040ff;
+}
+
+a {
+    text-decoration: none;
+    color: #404040ff;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 4em;
+    box-shadow: 0 0 4px 4px #80808080;
+    background-color: #ffffffff;
+}
+
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 2em);
+    height: 100%;
+    padding: 0 1em;
+}
+
+#headerLogo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 1em;
+    transition: all .3s;
+}
+
+#headerLogo:hover {
+    background-color: #80808040;
+}
+
+#headerLogo>img {
+    height: 2em;
+    margin-top: .1em;
+}
+
+#headerLogo>span {
+    font-weight: 900;
+    font-size: 1.5em;
+}
+
+#headerMenuButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 3em;
+    height: 3em;
+    border: none;
+    border-radius: 0.375em;
+    background-color: #00000000;
+    transition: all .3s;
+}
+
+#headerMenuButton:hover {
+    background-color: #80808040;
+    cursor: pointer;
+}
+
+
+#headerMenuButton>.close {
+    display: none;
+}
+
+#headerMenuButton.active>.open {
+    display: none;
+}
+
+#headerMenuButton.active>.close {
+    display: block;
+}
+
+#headerMenu {
+    position: fixed;
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: calc(100% - 4em - 8em);
+    padding: 4em 0;
+    overflow: auto;
+    background-color: #f8f8f8ff;
+    transition: all .3s;
+
+}
+
+#headerMenu.active {
+    right: 0%;
+}
+
+#headerMenu>nav {
+    width: 100%;
+    height: 100%;
+}
+
+#headerMenu>nav>ul {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#headerMenu>nav>ul>li {
+    width: calc(100% - 2em);
+    border-bottom: 1px solid #808080ff;
+    padding: 1em;
+    list-style: none;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+#headerMenu>nav>ul>li:hover {
+    background-color: #80808040;
+}
+
+#headerMenu>nav>ul>li>a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em;
+}
+
+main {
+    margin-top: 4em;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2em 0;
+}
+
+main a {
+    color: #40c080ff;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+main>.section {
+    padding: 2em 10%;
+}
+
+#pageTitle {
+    text-align: center;
+}
+
+main>.section>.sectionTitle {
+    display: flex;
+}
+
+main>.section>.sectionTitle::before {
+    display: block;
+    width: 4px;
+    height: auto;
+    margin-right: .5em;
+    background-color: #808080ff;
+    content: "";
+}
+
+main>.section>.content {
+    padding: 2em 0;
+}
+
+footer {
+    width: 100%;
+    height: 8em;
+    background-color: #202020ff;
+    color: #ffffffff;
+}
+
+footer>.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 4em);
+    height: calc(100% - 4em);
+    padding: 2em;
+}
+
+
+@media (min-width: 1024px) {
+    header .wrapper {
+        width: calc(80% - 2em);
+        margin: 0 auto;
+    }
+}

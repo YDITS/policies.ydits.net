@@ -1,0 +1,54 @@
+/*
+
+    docs.css | YDITS Policies
+
+    Copyright (c) YDITS, よね/Yone
+
+*/
+@charset "UTF-8";
+
+#pageTitle {
+    font-size: 1.3em;
+}
+
+#main>.section {
+    padding: 2em 0;
+}
+
+#main>.section>.sectionTitle {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+#main>.section>.sectionTitle::before {
+    display: block;
+    width: 4px;
+    height: auto;
+    margin-right: .5em;
+    background-color: #808080ff;
+    content: "";
+}
+
+#main>.section ol,
+#main>.section ul {
+    margin-left: 1em;
+}
+
+#main>.section ol>li,
+#main>.section ul>li {
+    margin-top: .5em;
+}
+
+#main a>.material-symbols-outlined {
+    display: inline-block;
+    font-size: 1em;
+}
+
+#after>.endword {
+    display: block;
+    text-align: right;
+}
+
+#after>.date {
+    display: block;
+}
