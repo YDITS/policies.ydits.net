@@ -147,7 +147,6 @@ header .wrapper {
 #headerMenu>nav>ul>li {
     width: calc(100% - 2em);
     border-bottom: 1px solid #808080ff;
-    padding: 1em;
     list-style: none;
     cursor: pointer;
     transition: all .3s;
@@ -161,6 +160,9 @@ header .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: calc(100% -2em);
+    height: calc(100% -2em);
+    padding: 1em;
     font-size: 1em;
 }
 
