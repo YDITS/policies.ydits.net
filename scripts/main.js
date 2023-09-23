@@ -2,7 +2,7 @@
 
     main.js | YDITS Policies
 
-    Copyright (c) YDITS, よね/Yone
+    (c) YDITS, よね/Yone
 
 */
 
