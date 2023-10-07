@@ -1,8 +1,8 @@
 /*
 
-    main.js | YDITS Policies
+    main.js | YDITS Policies Website
 
-    (c) YDITS, よね/Yone
+    (c) よね/Yone
 
 */
 
