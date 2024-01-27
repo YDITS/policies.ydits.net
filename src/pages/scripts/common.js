@@ -9,19 +9,29 @@
 "use strict";
 
 (() => {
-    $(() => {
+    const initializePage = () => {
         const onClickHeaderMenuButton = () => {
             $("#headerMenuButton").toggleClass('active');
             $("#headerMenu").toggleClass('active');
         }
 
-        $("header").load("./common/header.html");
-        $("footer").load("./common/footer.html");
+
+        const loadCommonElements = () => {
+            $("header").load("./common/header.html");
+            $("footer").load("./common/footer.html");
+        }
+
+
+        loadCommonElements();
+
 
         $(document).on(
             'click',
             "#headerMenuButton",
             () => onClickHeaderMenuButton()
         );
-    });
+    }
+
+
+    $(() => initializePage());
 })();
