@@ -8,12 +8,18 @@
 
 (() => {
     $(() => {
+        const onClickHeaderMenuButton() = () => {
+            $("#headerMenuButton").toggleClass('active');
+            $("#headerMenu").toggleClass('active');
+        }
+
         $("header").load("./common/header.html");
         $("footer").load("./common/footer.html");
 
-        $(document).on('click', "#headerMenuButton", () => {
-            $("#headerMenuButton").toggleClass('active');
-            $("#headerMenu").toggleClass('active');
-        });
+        $(document).on(
+            'click',
+            "#headerMenuButton",
+            () => onClickHeaderMenuButton()
+        );
     });
 })();
