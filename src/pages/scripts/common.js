@@ -8,7 +8,7 @@
 
 (() => {
     $(() => {
-        const onClickHeaderMenuButton() = () => {
+        const onClickHeaderMenuButton = () => {
             $("#headerMenuButton").toggleClass('active');
             $("#headerMenu").toggleClass('active');
         }
