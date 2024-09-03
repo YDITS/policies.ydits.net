@@ -2,27 +2,27 @@
 
     YDITS Policies Website
 
-    Copyright (c) よね/Yone
+    Copyright (C) よね/Yone
 
 */
 @charset "UTF-8";
 
-main>.section>.content>ul {
+main > .section > .content > ul {
     margin-left: 2em;
     padding: 1em 0;
 }
 
-main>.section>.content>ul>li {
-    margin-bottom: .2em;
+main > .section > .content > ul > li {
+    margin-bottom: 0.2em;
 }
 
-main>.section>.content>ul>li>a>.material-symbols-outlined {
+main > .section > .content > ul > li > a > .material-symbols-outlined {
     display: inline-block;
     font-size: 1em;
 }
 
 #note {
-    padding: .5em;
+    padding: 0.5em;
     background-color: #f0a060;
     color: #202020ff;
 }
