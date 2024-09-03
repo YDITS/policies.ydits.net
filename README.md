@@ -1,16 +1,17 @@
-
 # YDITS Policies
+
+[→ 日本語](./README_JP.md)
 
 ## Overview
 
-YDITSポリシーを記載するウェブサイトです。
+YDITS policies website.
 
 ## Usage
 
-`src/pages/` をデプロイします。
+Deploy directory `src/pages/`.
 
 ## LICENSE
 
-**No licensed.**
+No Licensed
 
-Copyright (c) よね/Yone
+Copyright (C) よね/Yone
