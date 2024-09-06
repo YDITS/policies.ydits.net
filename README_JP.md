@@ -6,6 +6,8 @@
 
 YDITSポリシーウェブサイトです。
 
+https://policies.ydits.net/ で公開しています。
+
 ## 利用方法
 
 `src/pages/` ディレクトリをデプロイします。
