@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*
 
     YDITS Policies Website
@@ -5,7 +7,6 @@
     Copyright (C) よね/Yone
 
 */
-@charset "UTF-8";
 
 main > .section > .content > ul {
     margin-left: 2em;
