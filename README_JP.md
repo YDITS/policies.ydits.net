@@ -1,6 +1,6 @@
 # YDITS Policies
 
-[→ English](./README.md)
+[Read in English >](./README.md)
 
 ## 概要
 
