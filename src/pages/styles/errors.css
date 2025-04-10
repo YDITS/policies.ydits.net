@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+/*
+
+    YDITS Policies Website
+
+    Copyright (C) よね/Yone
+
+*/
+
+.error {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 4rem 1rem;
+    gap: 2rem;
+}
+
+.error__title {
+    font-weight: var(--font-weight-semi-bold);
+    font-size: 1.5rem;
+}
+
+.error__link {
+    box-sizing: border-box;
+    width: fit-content;
+    height: fit-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100vw;
+
+    padding: 1em 2em;
+    background-color: var(--color);
+    color: var(--background-color);
+
+    transition: background-color var(--transition-duration);
+
+    &:hover {
+        text-decoration: none;
+        background-color: #e8e8e8;
+        color: var(--color);
+    }
+}
