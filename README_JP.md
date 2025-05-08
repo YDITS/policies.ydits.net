@@ -1,6 +1,6 @@
 # YDITS Policies
 
-[Read in English >](./README.md)
+[Read in English →](./README.md)
 
 ## 概要
 
@@ -16,4 +16,4 @@ https://policies.ydits.net/ で公開しています。
 
 ライセンスなし。
 
-Copyright (C) よね/Yone
+Copyright &copy; よね/Yone
