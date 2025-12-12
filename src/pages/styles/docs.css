@@ -28,6 +28,10 @@ main {
     font-size: 1.3em;
 }
 
+.alternate-formats {
+    list-style: none;
+}
+
 #main>.section {
     padding: 2em 0;
 }
