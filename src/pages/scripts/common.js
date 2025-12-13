@@ -8,84 +8,31 @@
 
 import { Render } from "https://cdn.yoneyo.com/scripts/render/render-v1.0.0.mjs";
 
-
 class Page {
     constructor() {
         this.render = new Render();
         this.#setupEventListeners();
     }
 
+    /**
+     * @type {HTMLElement | null}
+     */
+    #headerElement = null;
 
     /**
      * @type {HTMLElement | null}
      */
-    #_headerElement = null;
-
-
-    /**
-     * @type {HTMLElement | null}
-     */
-    #_footerElement = null;
-
+    #footerElement = null;
 
     /**
      * @type {HTMLElement | null}
      */
-    #_headerMenuButtonElement = null;
-
+    #headerMenuButtonElement = null;
 
     /**
      * @type {HTMLElement | null}
      */
-    #_headerMenuElement = null;
-
-
-    /**
-     * @returns {HTMLElement | null}
-     */
-    #headerElement() {
-        if (this.#_headerElement !== HTMLElement) {
-            this.#_headerElement = document.querySelector("header");
-        }
-
-        return this.#_headerElement;
-    }
-
-
-    /**
-     * @returns {HTMLElement | null}
-     */
-    #footerElement() {
-        if (this.#_footerElement !== HTMLElement) {
-            this.#_footerElement = document.querySelector("footer");
-        }
-
-        return this.#_footerElement;
-    }
-
-
-    /**
-     * @returns {HTMLElement | null}
-     */
-    #headerMenuButtonElement() {
-        if (this.#_headerMenuButtonElement !== HTMLElement) {
-            this.#_headerMenuButtonElement = document.getElementById("headerMenuButton");
-        }
-
-        return this.#_headerMenuButtonElement;
-    }
-
-
-    /**
-     * @returns {HTMLElement | null}
-     */
-    #headerMenuElement() {
-        if (this.#_headerMenuElement !== HTMLElement) {
-            this.#_headerMenuElement = document.getElementById("headerMenu");
-        }
-
-        return this.#_headerMenuElement;
-    }
+    #headerMenuElement = null;
 
     /**
      * @returns {void}
@@ -95,7 +42,6 @@ class Page {
         document.addEventListener("DOMContentLoaded", (event) => this.#onDOMContentLoaded(event));
     }
 
-
     /**
      * @param {ErrorEvent} event
      * @returns {void}
@@ -104,65 +50,59 @@ class Page {
         console.error(event.error);
     }
 
-
     /**
      * @param {Event} event
      * @returns {void}
      */
     #onDOMContentLoaded(event) {
-        this.#initializePage();
-    }
-
-
-    /**
-     * @returns {void}
-     */
-    #initializePage() {
+        this.#headerElement = document.querySelector("header");
+        this.#footerElement = document.querySelector("footer");
+        this.#headerMenuButtonElement = document.getElementById("headerMenuButton");
+        this.#headerMenuElement = document.getElementById("headerMenu");
         this.#loadCommonElements();
     }
-
 
     /**
      * @returns {void}
      */
     #loadCommonElements() {
         this.render.build({
-            target: this.#headerElement(),
+            target: this.#headerElement,
             children: this.#header(),
         });
 
         this.render.build({
-            target: this.#footerElement(),
+            target: this.#footerElement,
             children: this.#footer(),
         });
     }
-
 
     /**
      * @param {Event} event
      * @returns {void}
      */
     #onClickHeaderMenuButton(event) {
-        this.#headerMenuButtonElement().classList.toggle("active");
-        this.#headerMenuElement().classList.toggle("active");
+        this.#headerMenuButtonElement.classList.toggle("active");
+        this.#headerMenuElement.classList.toggle("active");
     }
-
 
     /**
      * @returns {HTMLElement[]}
      */
     #header() {
+        const { $div, $nav, $ul, $li, $a, $span, $button, $img } = this.render;
+
         const headerMenuItem = (href, title) => {
-            return this.render.$li({
+            return $li({
                 className: "header-menu__item",
                 children: [
-                    this.render.$a({
+                    $a({
                         href: href,
                         children: [
-                            this.render.$span({
+                            $span({
                                 textContent: title,
                             }),
-                            this.render.$span({
+                            $span({
                                 className: "material-symbols-outlined",
                                 textContent: "chevron_right",
                             }),
@@ -172,37 +112,36 @@ class Page {
             });
         }
 
-
         return [
-            this.render.$div({
+            $div({
                 className: "header-wrapper",
                 children: [
-                    this.render.$a({
+                    $a({
                         id: "headerLogo",
                         className: "header-logo",
                         href: "/",
                         children: [
-                            this.render.$img({
+                            $img({
                                 className: "header-logo__image",
                                 src: "https://cdn.ydits.net/images/ydits-logos/ydits_logo_transparent.png",
                                 alt: "YDITS Logo image",
                             }),
-                            this.render.$span({
+                            $span({
                                 className: "header-logo__text",
                                 textContent: "ポリシー",
                             }),
                         ],
                     }),
-                    this.render.$button({
+                    $button({
                         id: "headerMenuButton",
                         className: "header-menu-button",
                         onClick: (event) => this.#onClickHeaderMenuButton(event),
                         children: [
-                            this.render.$span({
+                            $span({
                                 className: "material-symbols-outlined open",
                                 textContent: "menu",
                             }),
-                            this.render.$span({
+                            $span({
                                 className: "material-symbols-outlined close",
                                 textContent: "close",
                             }),
@@ -210,14 +149,14 @@ class Page {
                     }),
                 ],
             }),
-            this.render.$div({
+            $div({
                 id: "headerMenu",
                 className: "header-menu",
                 children: [
-                    this.render.$nav({
+                    $nav({
                         className: "header-menu__nav",
                         children: [
-                            this.render.$ul({
+                            $ul({
                                 className: "header-menu__list",
                                 children: [
                                     headerMenuItem("/", "ホーム"),
@@ -234,16 +173,17 @@ class Page {
         ]
     }
 
-
     /**
      * @returns {HTMLElement[]}
      */
     #footer() {
+        const { $div, $span } = this.render;
+
         return [
-            this.render.$div({
+            $div({
                 className: "footer-wrapper",
                 children: [
-                    this.render.$span({
+                   $span({
                         innerHTML: "&copy; よね/Yone",
                     }),
                 ],
