@@ -224,7 +224,6 @@ class Page {
                                     headerMenuItem("/terms/webapp/", "YDITS for Web 利用規約"),
                                     headerMenuItem("/privacy/site/", "YDITS ウェブサイト プライバシーポリシー"),
                                     headerMenuItem("/terms/project/", "YDITS Project メンバー特約"),
-                                    headerMenuItem("https://quaeew.ydits.net/kiyaku.htm", "QuakeEEW for YDITS 利用規約"),
                                     headerMenuItem("/privacy/project/", "YDITS Project プライバシーポリシー"),
                                 ],
                             }),
