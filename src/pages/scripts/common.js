@@ -57,9 +57,9 @@ class Page {
     #onDOMContentLoaded(event) {
         this.#headerElement = document.querySelector("header");
         this.#footerElement = document.querySelector("footer");
+        this.#loadCommonElements();
         this.#headerMenuButtonElement = document.getElementById("headerMenuButton");
         this.#headerMenuElement = document.getElementById("headerMenu");
-        this.#loadCommonElements();
     }
 
     /**
