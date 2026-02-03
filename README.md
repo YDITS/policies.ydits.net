@@ -1,10 +1,10 @@
-# YDITS Policies
+# YDITS Policies Website
 
-[日本語で読む →](./README_JP.md)
+[日本語で読む >](./README_JP.md)
 
 ## Overview
 
-YDITS policies website.
+The website of YDITS policies.
 
 Published at https://policies.ydits.net/ .
 
@@ -14,6 +14,6 @@ Deploy directory `src/pages/`.
 
 ## License
 
-No licensed.
+This project is not licensed.
 
-Copyright &copy; よね/Yone
+Copyright © よね/Yone

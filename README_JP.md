@@ -1,10 +1,10 @@
-# YDITS Policies
+# YDITS Policies Website
 
-[Read in English →](./README.md)
+[Read in English >](./README.md)
 
 ## 概要
 
-YDITSポリシーウェブサイトです。
+YDITSポリシーのウェブサイトです。
 
 https://policies.ydits.net/ で公開しています。
 
@@ -14,6 +14,6 @@ https://policies.ydits.net/ で公開しています。
 
 ## ライセンス
 
-ライセンスなし。
+このプロジェクトはライセンスされません。
 
-Copyright &copy; よね/Yone
+Copyright © よね/Yone
