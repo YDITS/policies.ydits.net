@@ -1,4 +1,4 @@
-<!--
+<!--!
 
     YDITS Policies Website
 
@@ -9,25 +9,33 @@
 <html lang="ja">
 
 <head prefix="og: https://ogp.me/ns#">
-    <!-- Meta -->
     <meta charset="UTF-8">
 
+    <!-- Meta -->
     <title>YDITSポリシー</title>
+    <meta name="description" content="YDITSが提供するサービスで定める各規約をご確認いただけます。">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- OGP -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="YDITSポリシー">
-    <meta property="og:description" content="YDITSが提供するサービスで定める各規約をご確認いただけます。">
     <meta property="og:site_name" content="YDITSポリシー">
     <meta property="og:image" content="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png">
+    <meta property="og:title" content="YDITSポリシー">
+    <meta property="og:description" content="YDITSが提供するサービスで定める各規約をご確認いただけます。">
+
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://cdn.yoneyo.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Icons -->
     <link rel="shortcut icon" href="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png" type="image/x-icon">
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.yoneyo.com/styles/local-noto-sans-jp.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=chevron_forward,close,menu,open_in_new">
 
     <!-- Styles -->
     <link rel="stylesheet" href="/styles/common.css">
@@ -81,7 +89,7 @@
     </style>
 
     <!-- Scripts -->
-    <script src="/scripts/common.js" type="module" defer></script>
+    <script src="/scripts/common.js" type="module"></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WR0WWMPWL"></script>
@@ -95,7 +103,63 @@
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <div class="header-wrapper">
+            <a id="headerLogo" class="header-logo" href="/">
+                <img class="header-logo__image"
+                    src="https://cdn.ydits.net/images/ydits-logos/ydits_logo_transparent.png" alt="YDITS Logo image">
+                <span class="header-logo__text">
+                    ポリシー
+                </span>
+            </a>
+
+            <button id="headerMenuButton" class="header-menu-button">
+                <span class="material-symbols-outlined open">
+                    menu
+                </span>
+                <span class="material-symbols-outlined close">
+                    close
+                </span>
+            </button>
+        </div>
+
+        <div id="headerMenu" class="header-menu">
+            <nav class="header-menu__nav">
+                <ul class="header-menu__list">
+                    <li class="header-menu__item">
+                        <a href="/">
+                            <span>
+                                ホーム
+                            </span>
+                            <span class="material-symbols-outlined">
+                                chevron_forward
+                            </span>
+                        </a>
+                    </li>
+                    <li class="header-menu__item">
+                        <a href="/terms/webapp/">
+                            <span>
+                                YDITS for Web 利用規約
+                            </span>
+                            <span class="material-symbols-outlined">
+                                chevron_forward
+                            </span>
+                        </a>
+                    </li>
+                    <li class="header-menu__item">
+                        <a href="/privacy/site/">
+                            <span>
+                                YDITS ウェブサイト プライバシーポリシー
+                            </span>
+                            <span class="material-symbols-outlined">
+                                chevron_forward
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main>
         <section id="titleSection" class="section title-section">
@@ -143,37 +207,15 @@
                 </ul>
             </div>
         </section>
-
-        <section id="archiveSection" class="section archive-section">
-            <h2 class="section__title">
-                アーカイブされたポリシー
-            </h2>
-
-            <div class="section__content">
-                <p>
-                    過去に公開されていたポリシーをご確認いただけます。<br />
-                    ※効力は引き続き有効です。
-                </p>
-                
-                <ul class="policy-list">
-                    <li class="policy-item">
-                        <a href="/terms/project/">
-                            YDITS Project メンバー特約
-                        </a>
-                    </li>
-
-                    <li class="policy-item">
-                        <a href="/privacy/project">
-                            YDITS Project プライバシーポリシー
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-        </section>
     </main>
 
-    <footer></footer>
+    <footer>
+        <div class="footer-wrapper">
+            <span>
+                © よね/Yone
+            </span>
+        </div>
+    </footer>
 </body>
 
 </html>

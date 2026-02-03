@@ -1,15 +1,12 @@
 @charset "UTF-8";
 
-/*
+/*!
 
     YDITS Policies Website
 
     Copyright (C) よね/Yone
 
 */
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 :root {
     --max-width-large: 1024px;
@@ -18,7 +15,7 @@
     --background-color: #ffffffff;
     --background-color-note: #f0a060;
 
-    --font-family: "Noto Sans JP", sans-serif;
+    --font-family: "Local Noto Sans JP", "Noto Sans JP", sans-serif;
     --font-size: 16px;
     --font-weight: 400;
     --font-weight-semi-bold: 600;
@@ -76,8 +73,17 @@ h3 {
 
 /* .material-symbols-outlined */
 .material-symbols-outlined {
-    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
-    font-size: 1.75rem;
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
 }
 
 /* header */
