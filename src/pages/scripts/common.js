@@ -12,22 +12,6 @@ import { Render } from "https://cdn.yoneyo.com/scripts/render@1.0.0/render.js";
 
 class Page {
     /**
-     * @param {{ render: Render }} options
-     */
-    constructor({ render }) {
-        this.render = render;
-    }
-
-    /**
-     * @return {void}
-     */
-    initialize() {
-        this.#headerElement = document.querySelector("header");
-        this.#footerElement = document.querySelector("footer");
-        this.#loadCommonElements();
-    }
-
-    /**
      * @type {HTMLElement | null}
      */
     #headerElement = null;
@@ -46,6 +30,22 @@ class Page {
      * @type {HTMLElement | null}
      */
     #headerMenuElement = null;
+
+    /**
+     * @param {{ render: Render }} options
+     */
+    constructor({ render }) {
+        this.render = render;
+    }
+
+    /**
+     * @return {void}
+     */
+    initialize() {
+        this.#headerElement = document.querySelector("header");
+        this.#footerElement = document.querySelector("footer");
+        this.#loadCommonElements();
+    }
 
     /**
      * @returns {void}
