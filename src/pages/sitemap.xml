@@ -7,6 +7,12 @@
         <loc>https://policies.ydits.net/terms/webapp/</loc>
     </url>
     <url>
+        <loc>https://policies.ydits.net/terms/webapp/ydits-webapp-tos-markdown.md</loc>
+    </url>
+    <url>
         <loc>https://policies.ydits.net/privacy/site/</loc>
+    </url>
+    <url>
+        <loc>https://policies.ydits.net/privacy/site/ydits-website-privacy-policy-markdown.md</loc>
     </url>
 </urlset>
