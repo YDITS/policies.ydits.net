@@ -126,7 +126,7 @@ class Page {
                                 children: [
                                     this.#headerMenuItem("/", "ホーム"),
                                     this.#headerMenuItem("/terms/webapp/", "YDITS for Web 利用規約"),
-                                    this.#headerMenuItem("/privacy/site/", "YDITS ウェブサイト プライバシーポリシー"),
+                                    this.#headerMenuItem("/privacy/website/", "YDITS ウェブサイト プライバシーポリシー"),
                                 ],
                             }),
                         ],
