@@ -4,7 +4,7 @@
 
 ## Overview
 
-The website of YDITS policies.
+The YDITS policies website.
 
 Published at https://policies.ydits.net/ .
 
@@ -16,4 +16,4 @@ Deploy directory `src/pages/`.
 
 This project is not licensed.
 
-Copyright © よね/Yone
+Copyright © 2023-2026 よね/Yone

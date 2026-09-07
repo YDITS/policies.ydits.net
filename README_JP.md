@@ -16,4 +16,4 @@ https://policies.ydits.net/ で公開しています。
 
 このプロジェクトはライセンスされません。
 
-Copyright © よね/Yone
+Copyright © 2023-2026 よね/Yone
