@@ -11,6 +11,9 @@
 import { Render } from "https://cdn.yoneyo.com/scripts/render@1.0.0/render.js";
 
 class Page {
+    /**
+     * @param {{ render: Render }} options
+     */
     constructor({ render }) {
         this.render = render;
     }
@@ -63,12 +66,11 @@ class Page {
     }
 
     /**
-     * @param {Event} event
      * @returns {void}
      */
-    #onClickHeaderMenuButton(event) {
-        this.#headerMenuButtonElement.classList.toggle("active");
-        this.#headerMenuElement.classList.toggle("active");
+    #onClickHeaderMenuButton() {
+        this.#headerMenuButtonElement?.classList.toggle("active");
+        this.#headerMenuElement?.classList.toggle("active");
     }
 
     /**
@@ -100,7 +102,7 @@ class Page {
                     $button({
                         id: "headerMenuButton",
                         className: "header-menu-button",
-                        onClick: (event) => this.#onClickHeaderMenuButton(event),
+                        onClick: () => this.#onClickHeaderMenuButton(),
                         children: [
                             $span({
                                 className: "material-symbols-outlined open",
