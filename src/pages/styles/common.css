@@ -294,12 +294,14 @@ main {
 
 .page-title {
     text-align: center;
+    word-break: keep-all;
 }
 
 .section__title {
     display: flex;
     align-items: stretch;
     gap: 0.5em;
+    word-break: keep-all;
 
     &::before {
         display: block;
