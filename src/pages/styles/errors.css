@@ -11,13 +11,10 @@
 */
 
 .error {
-    box-sizing: border-box;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     gap: 2rem;
 }
 
@@ -27,25 +24,32 @@
 }
 
 .error__link {
-    box-sizing: border-box;
-    width: fit-content;
-    height: fit-content;
-
+    border-radius: 100lvw;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    border-radius: 100vw;
-
-    padding: 1em 2em;
-    background-color: var(--color);
+    padding: 1rem 2rem;
+    background-color: var(--text-color);
     color: var(--background-color);
+
+    cursor: pointer;
+    user-select: none;
 
     transition: background-color var(--transition-duration);
 
-    &:hover {
-        text-decoration: none;
-        background-color: #e8e8e8;
-        color: var(--color);
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            text-decoration: none;
+            background-color: #eee;
+            color: var(--color);
+        }
+    }
+
+    &:active {
+        background-color: #ccc;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: revert;
     }
 }
