@@ -47,6 +47,7 @@
 
     &:active {
         background-color: #ccc;
+        color: var(--color);
     }
 
     @media (prefers-reduced-motion: reduce) {
