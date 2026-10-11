@@ -199,7 +199,7 @@ header {
         display: none;
     }
 
-    &.active {
+    &[aria-expanded="true"] {
         .close {
             display: block;
         }
@@ -229,7 +229,7 @@ header {
 
     transition: visibility var(--transition-duration), left var(--transition-duration);
 
-    &.active {
+    &[aria-expanded="true"] {
         visibility: visible;
         left: 0%;
     }

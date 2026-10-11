@@ -66,8 +66,9 @@ class Page {
      * @returns {void}
      */
     #onClickHeaderMenuButton() {
-        this.#headerMenuButtonElement?.classList.toggle("active");
-        this.#headerMenuElement?.classList.toggle("active");
+        const toggleTo = this.#headerMenuButtonElement?.getAttribute("aria-expanded") === "false" ? "true" : "false";
+        this.#headerMenuButtonElement?.setAttribute("aria-expanded", toggleTo);
+        this.#headerMenuElement?.setAttribute("aria-expanded", toggleTo);
     }
 
     /**
