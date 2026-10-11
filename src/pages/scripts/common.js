@@ -60,9 +60,6 @@ class Page {
             target: this.#footerElement,
             children: this.#footer(),
         });
-
-        this.#headerMenuButtonElement = document.getElementById("headerMenuButton");
-        this.#headerMenuElement = document.getElementById("headerMenu");
     }
 
     /**
@@ -99,43 +96,65 @@ class Page {
                             }),
                         ],
                     }),
-                    $button({
-                        id: "headerMenuButton",
-                        className: "header-menu-button",
-                        onClick: () => this.#onClickHeaderMenuButton(),
-                        children: [
-                            $span({
-                                className: "material-symbols-outlined open",
-                                textContent: "menu",
-                            }),
-                            $span({
-                                className: "material-symbols-outlined close",
-                                textContent: "close",
-                            }),
-                        ],
-                    }),
+                    this.#headerMenuButton(),
                 ],
             }),
-            $div({
-                id: "headerMenu",
-                className: "header-menu",
-                children: [
-                    $nav({
-                        className: "header-menu__nav",
-                        children: [
-                            $ul({
-                                className: "header-menu__list",
-                                children: [
-                                    this.#headerMenuItem("/", "ホーム"),
-                                    this.#headerMenuItem("/terms/webapp/", "YDITS for Web 利用規約"),
-                                    this.#headerMenuItem("/privacy/website/", "YDITS ウェブサイト プライバシーポリシー"),
-                                ],
-                            }),
-                        ],
-                    }),
-                ],
-            }),
+            this.#headerMenu(),
         ]
+    }
+
+    /**
+     * @returns {Array<HTMLElement>}
+     */
+    #headerMenuButton() {
+        const { $button, $span } = this.render;
+
+        this.#headerMenuButtonElement = $button({
+            id: "headerMenuButton",
+            className: "header-menu-button",
+            onClick: () => this.#onClickHeaderMenuButton(),
+            children: [
+                $span({
+                    className: "material-symbols-outlined open",
+                    textContent: "menu",
+                }),
+                $span({
+                    className: "material-symbols-outlined close",
+                    textContent: "close",
+                }),
+            ],
+        });
+
+        return this.#headerMenuButtonElement;
+    }
+
+    /**
+     * @returns {Array<HTMLElement>}
+     */
+    #headerMenu() {
+        const { $div, $nav, $ul } = this.render;
+
+        this.#headerMenuElement = $div({
+            id: "headerMenu",
+            className: "header-menu",
+            children: [
+                $nav({
+                    className: "header-menu__nav",
+                    children: [
+                        $ul({
+                            className: "header-menu__list",
+                            children: [
+                                this.#headerMenuItem("/", "ホーム"),
+                                this.#headerMenuItem("/terms/webapp/", "YDITS for Web 利用規約"),
+                                this.#headerMenuItem("/privacy/website/", "YDITS ウェブサイト プライバシーポリシー"),
+                            ],
+                        }),
+                    ],
+                }),
+            ],
+        });
+
+        return this.#headerMenuElement;
     }
 
     /**
