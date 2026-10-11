@@ -71,7 +71,7 @@ class Page {
     }
 
     /**
-     * @returns {HTMLElement[]}
+     * @returns {Array<HTMLElement>}
      */
     #header() {
         const { $div, $nav, $ul, $a, $span, $button, $img } = this.render;
@@ -185,7 +185,7 @@ class Page {
     }
 
     /**
-     * @returns {HTMLElement[]}
+     * @returns {Array<HTMLElement>}
      */
     #footer() {
         const { $div, $span } = this.render;
