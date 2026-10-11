@@ -126,6 +126,9 @@ class Page {
             ],
         });
 
+        this.#headerMenuButtonElement?.setAttribute("aria-controls", "headerMenu");
+        this.#headerMenuButtonElement?.setAttribute("aria-expanded", "false");
+
         return this.#headerMenuButtonElement;
     }
 
@@ -154,6 +157,8 @@ class Page {
                 }),
             ],
         });
+
+        this.#headerMenuElement?.setAttribute("aria-expanded", "false");
 
         return this.#headerMenuElement;
     }
