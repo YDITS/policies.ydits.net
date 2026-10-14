@@ -89,7 +89,7 @@ class Page {
                             $img({
                                 className: "header-logo__image",
                                 src: "https://cdn.ydits.net/images/ydits-logos/ydits_logo_transparent.png",
-                                alt: "YDITS Logo image",
+                                alt: "YDITSのロゴ",
                             }),
                             $span({
                                 className: "header-logo__text",
