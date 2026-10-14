@@ -38,6 +38,7 @@
     /* footer */
     --footer-height: 8rem;
 
+    scroll-padding-block-start: var(--header-height);
     scroll-behavior: smooth;
     font-family: var(--font-family);
     font-size: var(--font-size);
@@ -289,7 +290,7 @@ header {
 /* main */
 
 main {
-    margin-top: var(--header-height);
+    margin-block-start: var(--header-height);
     min-height: calc(100dvh - var(--header-height) - var(--footer-height));
 }
 
