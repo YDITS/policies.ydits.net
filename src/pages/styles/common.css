@@ -29,8 +29,8 @@
         sans-serif;
     --font-size: 100%;
     --font-weight: 400;
-    --font-weight-semi-bold: 700;
-    --font-weight-bold: 900;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
 
     --primary-color: hsl(150 50% 50%);
     --primary-color-dim: hsl(from var(--primary-color) h s calc(l - 12));
@@ -156,17 +156,17 @@ body {
 
 h1 {
     font-size: 1.5rem;
-    font-weight: var(--font-weight-semi-bold);
+    font-weight: var(--font-weight-bold);
 }
 
 h2 {
     font-size: 1.2rem;
-    font-weight: var(--font-weight-semi-bold);
+    font-weight: var(--font-weight-bold);
 }
 
 h3 {
     font-size: 1rem;
-    font-weight: var(--font-weight-semi-bold);
+    font-weight: var(--font-weight-bold);
 }
 
 a {
@@ -248,7 +248,7 @@ header {
 }
 
 .header-logo__text {
-    font-weight: var(--font-weight-semi-bold);
+    font-weight: var(--font-weight-bold);
     font-size: 1.5rem;
     line-height: 1;
     color: var(--text-color);
@@ -362,7 +362,7 @@ header {
         justify-content: space-between;
         align-items: center;
         padding: 1rem;
-        font-weight: var(--font-weight-semi-bold);
+        font-weight: var(--font-weight-bold);
         color: var(--text-color);
 
         &:hover {
