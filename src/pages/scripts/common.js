@@ -89,8 +89,6 @@ class Page {
                             $img({
                                 className: "header-logo__image",
                                 src: "https://cdn.ydits.net/images/ydits-logos/ydits_logo_transparent.png",
-                                width: 1536,
-                                height: 578,
                                 alt: "YDITSのロゴ",
                             }),
                             $span({
